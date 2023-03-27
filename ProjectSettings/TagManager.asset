@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - WeakPoint
+  - ScoreManager
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - GroundTest
+  - Player
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 350323191
+    locked: 0
+  - name: Foreground
+    uniqueID: 2662189725
+    locked: 0
+  - name: Platform
+    uniqueID: 1148496737
+    locked: 0
+  - name: Player
+    uniqueID: 1726025143
+    locked: 0
+  - name: Lava
+    uniqueID: 2391580301
+    locked: 0
