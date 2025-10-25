@@ -17,7 +17,7 @@ A short gameplay video:
 Inspired by classic pixel platformers and old-school simplistic graphics this project explored physics-based slime movement and procedural platform generation to create replayablity and simple fun, think of games such as Jetpack Joyride / Subway Surfers / etc.
 
 <H3>Core Systems</H3>
-![SlimeJumpPlayerMovement](https://github.com/user-attachments/assets/d3ef9b65-4300-4ec2-9e9f-acaec31d47d2)
+<video src="https://github.com/user-attachments/assets/d3ef9b65-4300-4ec2-9e9f-acaec31d47d2" autoplay loop muted></video>
 
 The player moves by dragging their finger accross the touch screen of their mobile device , kind of like sling shotting yourself across short distances to mimic the fantasy-like movement of a slime creature.
 Movement here is entirely driven by vector math and the 2D physics systems of the engine , When the player drags the screen the game records a start point and continuously updates a trajectory line between that point and the current cursor position.
