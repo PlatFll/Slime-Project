@@ -32,32 +32,33 @@ Animation controller is also used to update the states of the slime between "Sti
 
 A small snippet of the code used :
 
- if(Input.GetMouseButtonDown(0))
-        {
-            startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
-            startPoint.z = 15;
-        }
+```markdown
+A small snippet of the code used:
 
-        if(Input.GetMouseButton(0))
-        {
-            Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
-            currentPoint.z = 5;
-            tl.RenderLine(startPoint, currentPoint);
-            
-        }
+```csharp
+if(Input.GetMouseButtonDown(0))
+{
+    startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+    startPoint.z = 15;
+}
 
-        if(Input.GetMouseButtonUp(0))
-        {
-            tl.EndLine();
-            endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
-            endPoint.z = 15;
+if(Input.GetMouseButton(0))
+{
+    Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+    currentPoint.z = 5;
+    tl.RenderLine(startPoint, currentPoint);
+}
 
-            force = CalculatePowerVectorV2(startPoint, endPoint);
-            rb.AddForce(force * power, ForceMode2D.Impulse);
+if(Input.GetMouseButtonUp(0))
+{
+    tl.EndLine();
+    endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+    endPoint.z = 15;
 
-            anim.SetTrigger("Jump");
-            
-        }
+    force = CalculatePowerVectorV2(startPoint, endPoint);
+    rb.AddForce(force * power, ForceMode2D.Impulse);
+    anim.SetTrigger("Jump");
+}
 
 
 
