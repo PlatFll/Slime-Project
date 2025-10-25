@@ -20,7 +20,8 @@ Inspired by classic pixel platformers and old-school simplistic graphics this pr
 
 <H5>Player Movement</H5>
 
-![Slime Jump Player Movement](https://github.com/user-attachments/assets/3f05cc08-f108-49a2-b569-370c27bf407e.gif)
+<video src="https://github.com/user-attachments/assets/40b3e0fc-fb79-4555-bfa5-53f504c3ddb8" autoplay loop muted></video>
+
 
 
 The player moves by dragging their finger accross the touch screen of their mobile device , kind of like sling shotting yourself across short distances to mimic the fantasy-like movement of a slime creature.
