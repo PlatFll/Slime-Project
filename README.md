@@ -8,7 +8,7 @@ The idea was to be a replayable endless-type game where the player would try ove
 A short gameplay video:
 
 <p align="center">
-<video src="Media/SlimeJumpGameplay.mp4" autoplay loop muted></video>
+<video src="Slime-Project/Media/SlimeJumpGameplay.mp4" autoplay loop muted></video>
 </p>
 
 
