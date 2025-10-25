@@ -24,11 +24,11 @@ Inspired by classic pixel platformers and old-school simplistic graphics this pr
 
 
 
-The player moves by dragging their finger accross the touch screen of their mobile device , kind of like sling shotting yourself across short distances to mimic the fantasy-like movement of a slime creature.
-Movement here is entirely driven by vector math and the 2D physics systems of the engine , When the player drags the screen the game records a start point and continuously updates a trajectory line between that point and the current cursor position.
-On release, the difference between the two points basically translates into the jump direction and power of said jump.
-This vector is applied as an impulse to the slime's Rigidbody2D, launching it across the scene. Then I tried using Vector2.Lerp to simulate friction and air resistance so the slime wouldn't fly too high or too far to the right or left, you can also tap mid-air to force the slime to stomp down to the ground when needed to land earlier than the trajectory would've sent you (Had some hard platforming planned for higher levels so I implemented this early.. Plus it feels also better to have it than not to)
-Animation controller is also used to update the states of the slime between "Still", "Jump" and "Idle".
+<p>The player moves by dragging their finger accross the touch screen of their mobile device , kind of like sling shotting yourself across short distances to mimic the fantasy-like movement of a slime creature.
+Movement here is entirely driven by vector math and the 2D physics systems of the engine , When the player drags the screen the game records a start point and continuously updates a trajectory line between that point and the current cursor position.</p>
+<p></p>On release, the difference between the two points basically translates into the jump direction and power of said jump.</p>
+<p></p>This vector is applied as an impulse to the slime's Rigidbody2D, launching it across the scene. Then I tried using Vector2.Lerp to simulate friction and air resistance so the slime wouldn't fly too high or too far to the right or left, you can also tap mid-air to force the slime to stomp down to the ground when needed to land earlier than the trajectory would've sent you (Had some hard platforming planned for higher levels so I implemented this early.. Plus it feels also better to have it than not to)</p>
+<p></p>Animation controller is also used to update the states of the slime between "Still", "Jump" and "Idle".</p>
 
 A small snippet of the code used :
 
