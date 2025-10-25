@@ -32,7 +32,7 @@ Movement here is entirely driven by vector math and the 2D physics systems of th
 
 A small snippet of the code used :
 
-```markdown
+
 A small snippet of the code used:
 
 ```csharp
