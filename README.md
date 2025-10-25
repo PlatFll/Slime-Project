@@ -13,7 +13,46 @@ A short gameplay video:
 <video src="https://github.com/user-attachments/assets/ba2c3255-656e-46a7-b6fa-3d3fff6e0c43" autoplay loop muted></video>
 </div>
 
+<H3>Game Concept</H3>
+Inspired by classic pixel platformers and old-school simplistic graphics this project explored physics-based slime movement and procedural platform generation to create replayablity and simple fun, think of games such as Jetpack Joyride / Subway Surfers / etc.
 
+<H3>Core Systems</H3>
+![SlimeJumpPlayerMovement](https://github.com/user-attachments/assets/d3ef9b65-4300-4ec2-9e9f-acaec31d47d2)
+
+The player moves by dragging their finger accross the touch screen of their mobile device , kind of like sling shotting yourself across short distances to mimic the fantasy-like movement of a slime creature.
+Movement here is entirely driven by vector math and the 2D physics systems of the engine , When the player drags the screen the game records a start point and continuously updates a trajectory line between that point and the current cursor position.
+On release, the difference between the two points basically translates into the jump direction and power of said jump.
+This vector is applied as an impulse to the slime's Rigidbody2D, launching it across the scene. Then I tried using Vector2.Lerp to simulate friction and air resistance so the slime wouldn't fly too high or too far to the right or left, you can also tap mid-air to force the slime to stomp down to the ground when needed to land earlier than the trajectory would've sent you (Had some hard platforming planned for higher levels so I implemented this early.. Plus it feels also better to have it than not to)
+Animation controller is also used to update the states of the slime between "Still", "Jump" and "Idle".
+
+A small snippet of the code used :
+
+ if(Input.GetMouseButtonDown(0))
+        {
+            startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+            startPoint.z = 15;
+        }
+
+        if(Input.GetMouseButton(0))
+        {
+            Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+            currentPoint.z = 5;
+            tl.RenderLine(startPoint, currentPoint);
+            
+        }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            tl.EndLine();
+            endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+            endPoint.z = 15;
+
+            force = CalculatePowerVectorV2(startPoint, endPoint);
+            rb.AddForce(force * power, ForceMode2D.Impulse);
+
+            anim.SetTrigger("Jump");
+            
+        }
 
 
 
