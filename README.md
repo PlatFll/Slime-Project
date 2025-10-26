@@ -168,11 +168,9 @@ Code snippet for the invulnerability effect :
     {
         Physics2D.IgnoreLayerCollision(7, 8, true);
         for(int i = 0; i < numberOfFlashes; i++)
-        {
-            //spriteRend.color = new Color(0, 0, 0, 1);
+        {                   
             spriteRend.material = flashMaterial;
-            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-            //spriteRend.color = Color.white;
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));        
             spriteRend.material = originalMaterial;
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
