@@ -231,7 +231,7 @@ Code snippet for the invulnerability effect :
 <h2>Music</h2>
 
 <audio controls>
-<source src="Media/SlimeJumpMainTheme.mp3" type="audio/mpeg">
+<source src="https://github.com/PlatFll/Slime-Project/raw/refs/heads/main/Media/SlimeJumpMainTheme.mp3" type="audio/mpeg">
 </audio>
 
 <h2>Final Thoughts / Notes </h2>
