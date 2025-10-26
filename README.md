@@ -16,9 +16,9 @@ A short gameplay video:
 <H2>Game Concept</H2>
 Inspired by classic pixel platformers and old-school simplistic graphics this project explored physics-based slime movement and procedural platform generation to create replayablity and simple fun, think of games such as Jetpack Joyride / Subway Surfers / etc.
 
-<H2>Core Systems</H2>
+<h2>Core Systems</h2>
 
-<H4>Player Movement</H4>
+<h4>Player Movement</h4>
 
 <video src="https://github.com/user-attachments/assets/40b3e0fc-fb79-4555-bfa5-53f504c3ddb8" autoplay loop muted></video>
 
@@ -57,7 +57,7 @@ if(Input.GetMouseButtonUp(0))
     anim.SetTrigger("Jump");
 }
 ```
-<H4>Enemy Movement</H4>
+<h4>Enemy Movement</h4>
 
 <video src="https://github.com/user-attachments/assets/8b377402-36c1-4234-81a6-86df64c47fdc" autoplay loop muted></video>
 
@@ -110,7 +110,7 @@ A small snippet of the code for enemy movement :
     }
 ```
 
-<H4>Platform Generator</H4>
+<h4>Platform Generator</h4>
 
 <img width="405" alt="SlimeJumpPlatformGenerator" src="https://github.com/user-attachments/assets/bcef704f-8333-4613-9910-308fdb1e65c8" />
 
@@ -154,7 +154,7 @@ void GeneratePlatform()
 }
 ```
 
-<H4>Damage & HP</H4>
+<h4>Damage & HP</h4>
 
 <video src="https://github.com/user-attachments/assets/fda94111-1b8d-48a6-a0c7-7237bd292845" autoplay loop muted></video>
 
@@ -199,9 +199,9 @@ Code snippet for the invulnerability effect :
             StartCoroutine(Invulnerability());
         }
 ```
-<H4>Lava.</H4>
+<h4>Lava.</h4>
 
-<p>I wanted to add a mechanic that would make the player keep going and not stop, a time limit obviously wouldn't work in a game like this so what better option than to be chases by rising lava to keep you going up the platforms?</p>
+<p>I wanted to add a mechanic that would make the player keep going and not stop, a time limit obviously wouldn't work in a game like this so what better option than to be chased by rising lava to keep you going up the platforms?</p>
 
 <p>Well... It was supposed to be lava but as I'm not really good at pixel art... Just see for yourself.</p>
 
@@ -209,3 +209,39 @@ Code snippet for the invulnerability effect :
 
 
 <p>The lava would always be at a certain distance below the player no matter how fast or how slow the player moves up the platforms , I added this because I wanted to also add power-ups in the future and one of the powerups would be a super jump to skip multiple platforms at once, And if the lava was always going at the same speed it'd never catch up to a fast player or a power-up abuser so I added this mechanic early on.</p>
+
+<h2>Future Plans</h2>
+
+```markdown
+
+- Menu system and the ability to save your score.
+- Vastly expand on enemy types and traps
+- Vastly expand on platform combination and variation
+- Possibility of region changes the higher the player goes?
+- Power-ups and Slime evolutions
+- Boss encounters that would stop the player in a limited platform space or be chased by a boss that throws attacks from above?
+```
+
+<h2>Project Info</h2>
+
+```markdown
+- **Engine:** Unity 2021.3.3f1
+- **Language:** C#
+- **Art:** Custom 32x32 pixel sprites
+- **Version Control:** Git + Github
+```
+<h2>Music</h2>
+
+[SlimeJumpMainTheme.mp3](https://github.com/user-attachments/files/23146633/SlimeJumpMainTheme.mp3)
+
+<h2>Final Thoughts / Notes </h2>
+
+<p>This was my first big project in gamedev and I learned a ton about platformer physics, sprite animation (except the block of cheese) , procedural generation and enemy behaviour.</p>
+<p>The two biggest challenges were : 
+    1 - Balancing the smoothness of the movement with precide jumping , I fixed this by tweaking RigidBody2D gravity and drag manually
+    2 - Figuring out how to create the platform generator and then making it work how I envisioned it to.</p>
+<p>All in all I had alot of fun working on this project and I learned alot. If you'd like to connect or give me feedback we could do that either here or on LinkedIn:</p>
+[LinkedIn Profile](https://www.linkedin.com/in/ali-dia-0563a5242/)
+
+<h2>Thank you for taking the time to check out my project, Have a great day.</h2>
+ 
