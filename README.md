@@ -242,7 +242,11 @@ Code snippet for the invulnerability effect :
     2 - Figuring out how to create the platform generator and then making it work how I envisioned it to.</p>
 <p>All in all I had alot of fun working on this project and I learned alot. If you'd like to connect or give me feedback we could do that either here or on LinkedIn:</p>
 
-**[LinkedIn](https://www.linkedin.com/in/ali-dia-0563a5242/)**
+<p align="center">
+  <a href="https://www.linkedin.com/in/ali-dia-0563a5242/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin" alt="LinkedIn Badge"/>
+  </a>
+</p>
 
 <p align="center">
 <h2>Thank you for taking the time to check out my project, Have a great day.</h2>
