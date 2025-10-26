@@ -223,14 +223,16 @@ Code snippet for the invulnerability effect :
 <h2>Project Info</h2>
 
 ```markdown
-- **Engine:** Unity 2021.3.3f1
-- **Language:** C#
-- **Art:** Custom 32x32 pixel sprites
-- **Version Control:** Git + Github
+- Engine: Unity 2021.3.3f1
+- Language: C#
+- Art: Custom 32x32 pixel sprites
+- Version Control: Git + Github
 ```
 <h2>Music</h2>
 
-[SlimeJumpMainTheme.mp3](https://github.com/user-attachments/files/23146633/SlimeJumpMainTheme.mp3)
+<audio controls>
+<source src="https://github.com/user-attachments/files/23146633/SlimeJumpMainTheme.mp3" type="audio/mpeg">
+</audio>
 
 <h2>Final Thoughts / Notes </h2>
 
@@ -239,7 +241,9 @@ Code snippet for the invulnerability effect :
     1 - Balancing the smoothness of the movement with precide jumping , I fixed this by tweaking RigidBody2D gravity and drag manually
     2 - Figuring out how to create the platform generator and then making it work how I envisioned it to.</p>
 <p>All in all I had alot of fun working on this project and I learned alot. If you'd like to connect or give me feedback we could do that either here or on LinkedIn:</p>
-[LinkedIn Profile](https://www.linkedin.com/in/ali-dia-0563a5242/)
 
+**[LinkedIn](https://www.linkedin.com/in/ali-dia-0563a5242/)**
+
+<p align="center">
 <h2>Thank you for taking the time to check out my project, Have a great day.</h2>
- 
+</p>
