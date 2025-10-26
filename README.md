@@ -60,3 +60,52 @@ if(Input.GetMouseButtonUp(0))
 <H5>Enemy Movement</H5>
 
 <video src="https://github.com/user-attachments/assets/8b377402-36c1-4234-81a6-86df64c47fdc" autoplay loop muted></video>
+
+<p>The enemy patrol system simply has two preset points the enemy would be moving to back and forth which is very common in platformer games.</p>
+<p>During gameplay the enemy would move until it reaches the predetermined edge and then activate an idle animation before it moves again , giving the illusian of awareness and timing in the enemy's behavior.</p>
+<p>I also made an animation and some code for the enemy being able to swing it's sword if the player was close enough. </p>
+
+A small snippet of the code for enemy movement :
+
+```csharp
+
+        if(movingLeft)
+        {   
+            if(enemy.position.x >= leftEdge.position.x)
+                MoveInDirection(-1);
+            else
+            {
+                DirectionChange();
+            }
+        }
+        else
+        {   
+            if(enemy.position.x <= rightEdge.position.x)
+                MoveInDirection(1);
+            else
+            {
+                DirectionChange();
+            }
+
+    private void DirectionChange()
+    {
+        anim.SetBool("Moving", false);
+
+        idleTimer += Time.deltaTime;
+
+        if(idleTimer > idleDuration)
+            movingLeft = !movingLeft;
+    }
+
+    private void MoveInDirection(int direction)
+    {
+        idleTimer = 0;
+        anim.SetBool("Moving", true);
+
+        //Make enemy face direction
+        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
+        //Move in that direction
+        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * direction * speed,
+        enemy.position.y, enemy.position.z);
+    }
+```
