@@ -118,3 +118,94 @@ A small snippet of the code for enemy movement :
 <p>It dynamically spawns new platforms above the player levels before the player even reaches them while simultaniously deleting older platforms below the player to optimize performance.</p>
 <p>The system takes a list of prefrabs in Unity , those prefabs would be hand-made platform combinations with different enemies / traps / designs. You could add as many as you want and the system would randomly choose between them and spawn them on top of one another with the exact same distance between each platform, This design choice gave me alot of creative freedom to make up platforms of as many different combinations as I could think of.</p>
 
+```csharp
+
+void Update()
+{
+    // Generate new platforms when player climbs high enough
+    if (player.transform.position.y > (lastPlatformY - 100))
+    {
+        for (int i = 0; i < numPlatforms; i++)
+        {
+            GeneratePlatform();
+            platformCounter++;
+
+            // Clean up every few cycles
+            if (platformCounter >= 5)
+            {
+                platformCounter = 0;
+                DestroyPlatformsBelowPlayer();
+            }
+        }
+    }
+}
+
+void GeneratePlatform()
+{
+    GameObject prefab = platformPrefabList[Random.Range(0, platformPrefabList.Count)];
+    GameObject platform = Instantiate(prefab);
+
+    float x = Random.Range(-maxX, maxX);
+    float y = lastPlatformY + gap;
+    platform.transform.position = new Vector3(x, y, 0);
+
+    generatedPlatforms.Add(platform);
+    lastPlatformY = y;
+}
+```
+
+<H4>Damage & HP</H4>
+
+<video src="https://github.com/user-attachments/assets/fda94111-1b8d-48a6-a0c7-7237bd292845" autoplay loop muted></video>
+
+<p>The classic player character starts to flash white and become invulnerable for a second, Player takes damage when the hitbox attached to the player's character comes to contact with an enemy or a trap.</p>
+
+Code snippet for the invulnerability effect :
+
+```csharp
+
+    private IEnumerator Invulnerability()
+    {
+        Physics2D.IgnoreLayerCollision(7, 8, true);
+        for(int i = 0; i < numberOfFlashes; i++)
+        {
+            //spriteRend.color = new Color(0, 0, 0, 1);
+            spriteRend.material = flashMaterial;
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+            //spriteRend.color = Color.white;
+            spriteRend.material = originalMaterial;
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+        }
+        Physics2D.IgnoreLayerCollision(7, 8, false);
+
+    }
+
+```
+
+<video src="https://github.com/user-attachments/assets/78a7ba59-6c26-48ff-8fd0-c411e46244ff" autoplay loop muted></video>
+
+<p>Player loses HP as long as they have any whenn getting hit or taking damage.</p>
+
+```csharp
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
+
+        if(currentHealth > 0)
+        {
+            anim.SetTrigger("Hurt");
+            //IFrames
+            StartCoroutine(Invulnerability());
+        }
+```
+<H4>Lava.</H4>
+
+<p>I wanted to add a mechanic that would make the player keep going and not stop, a time limit obviously wouldn't work in a game like this so what better option than to be chases by rising lava to keep you going up the platforms?</p>
+
+<p>Well... It was supposed to be lava but as I'm not really good at pixel art... Just see for yourself.</p>
+
+<video src="https://github.com/user-attachments/assets/2c9b838c-b552-4993-a1f1-c3f084cd3a76" autoplay loop muted></video>
+
+
+<p>The lava would always be at a certain distance below the player no matter how fast or how slow the player moves up the platforms , I added this because I wanted to also add power-ups in the future and one of the powerups would be a super jump to skip multiple platforms at once, And if the lava was always going at the same speed it'd never catch up to a fast player or a power-up abuser so I added this mechanic early on.</p>
