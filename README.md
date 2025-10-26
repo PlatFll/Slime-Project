@@ -69,7 +69,7 @@ A small snippet of the code for enemy movement :
 
 ```csharp
 
-        if(movingLeft)
+if(movingLeft)
         {   
             if(enemy.position.x >= leftEdge.position.x)
                 MoveInDirection(-1);
@@ -87,7 +87,7 @@ A small snippet of the code for enemy movement :
                 DirectionChange();
             }
 
-    private void DirectionChange()
+private void DirectionChange()
     {
         anim.SetBool("Moving", false);
 
@@ -97,7 +97,7 @@ A small snippet of the code for enemy movement :
             movingLeft = !movingLeft;
     }
 
-    private void MoveInDirection(int direction)
+private void MoveInDirection(int direction)
     {
         idleTimer = 0;
         anim.SetBool("Moving", true);
