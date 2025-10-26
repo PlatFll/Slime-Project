@@ -111,3 +111,10 @@ A small snippet of the code for enemy movement :
 ```
 
 <H4>Platform Generator</H4>
+
+<img width="405" alt="SlimeJumpPlatformGenerator" src="https://github.com/user-attachments/assets/bcef704f-8333-4613-9910-308fdb1e65c8" />
+
+<p>The platform generator is the main system of the whole game , It's responsible for creating the endless platforms illusion.</p>
+<p>It dynamically spawns new platforms above the player levels before the player even reaches them while simultaniously deleting older platforms below the player to optimize performance.</p>
+<p>The system takes a list of prefrabs in Unity , those prefabs would be hand-made platform combinations with different enemies / traps / designs. You could add as many as you want and the system would randomly choose between them and spawning them on top of one another with the exact same distance between each platform, This desing choice made it really easy to be creative and add as many different combinations as I could think of.</p>
+
