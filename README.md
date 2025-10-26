@@ -228,11 +228,6 @@ Code snippet for the invulnerability effect :
 - Art: Custom 32x32 pixel sprites
 - Version Control: Git + Github
 ```
-<h2>Music</h2>
-
-<audio controls>
-<source src="https://github.com/PlatFll/Slime-Project/raw/refs/heads/main/Media/SlimeJumpMainTheme.mp3" type="audio/mpeg">
-</audio>
 
 <h2>Final Thoughts / Notes </h2>
 
