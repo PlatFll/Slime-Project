@@ -231,15 +231,15 @@ Code snippet for the invulnerability effect :
 <h2>Music</h2>
 
 <audio controls>
-<source src="https://github.com/user-attachments/files/23146633/SlimeJumpMainTheme.mp3" type="audio/mpeg">
+<source src="https://github.com/user-attachments/files/23146633/SlimeJumpMainTheme.mp3" type="audio/mpeg"raw=true>
 </audio>
 
 <h2>Final Thoughts / Notes </h2>
 
 <p>This was my first big project in gamedev and I learned a ton about platformer physics, sprite animation (except the block of cheese) , procedural generation and enemy behaviour.</p>
-<p>The two biggest challenges were : 
-    1 - Balancing the smoothness of the movement with precide jumping , I fixed this by tweaking RigidBody2D gravity and drag manually
-    2 - Figuring out how to create the platform generator and then making it work how I envisioned it to.</p>
+<p>The two biggest challenges were :</p>
+    <p>1 - Balancing the smoothness of the movement with precide jumping , I fixed this by tweaking RigidBody2D gravity and drag manually.</p>
+    <p>2 - Figuring out how to create the platform generator and then making it work how I envisioned it to.</p>
 <p>All in all I had alot of fun working on this project and I learned alot. If you'd like to connect or give me feedback we could do that either here or on LinkedIn:</p>
 
 <p align="center">
