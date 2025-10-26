@@ -13,12 +13,12 @@ A short gameplay video:
 <video src="https://github.com/user-attachments/assets/ba2c3255-656e-46a7-b6fa-3d3fff6e0c43" autoplay loop muted></video>
 </div>
 
-<H3>Game Concept</H3>
+<H2>Game Concept</H2>
 Inspired by classic pixel platformers and old-school simplistic graphics this project explored physics-based slime movement and procedural platform generation to create replayablity and simple fun, think of games such as Jetpack Joyride / Subway Surfers / etc.
 
-<H3>Core Systems</H3>
+<H2>Core Systems</H2>
 
-<H5>Player Movement</H5>
+<H4>Player Movement</H4>
 
 <video src="https://github.com/user-attachments/assets/40b3e0fc-fb79-4555-bfa5-53f504c3ddb8" autoplay loop muted></video>
 
@@ -57,7 +57,7 @@ if(Input.GetMouseButtonUp(0))
     anim.SetTrigger("Jump");
 }
 ```
-<H5>Enemy Movement</H5>
+<H4>Enemy Movement</H4>
 
 <video src="https://github.com/user-attachments/assets/8b377402-36c1-4234-81a6-86df64c47fdc" autoplay loop muted></video>
 
@@ -109,3 +109,5 @@ A small snippet of the code for enemy movement :
         enemy.position.y, enemy.position.z);
     }
 ```
+
+<H4>Platform Generator</H4>
